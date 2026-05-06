@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Works - Rakib</title>
+    <link rel="stylesheet" href="work.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="logo">Rakib</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skill.html">Skills</a>
+            <a href="work.html" class="active">Works</a>
+            <a href="contact.html">Contact</a>
+            <a href="achievement.html">Achievement</a>
+        </nav>
+        <label class="switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider"></span>
+        </label>
+    </header>
+
+    <!-- Works Section -->
+    <section class="works-section">
+        <div class="works-container">
+            <div class="works-header">
+                <h1>My Works</h1>
+                <p>Projects and achievements I'm proud of</p>
+            </div>
+
+            <div class="works-grid">
+                <!-- Project 4 -->
+                <div class="work-card">
+                    <div class="work-image">
+                        <i class="fas fa-comment-dots"></i>
+                    </div>
+                    <div class="work-content">
+                        <h3>Web-Based Messaging System</h3>
+                        <p>Real-time messaging application enabling users to communicate effectively with message storage and retrieval capabilities.</p>
+                        <div class="work-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">MySql</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="work-card">
+                    <div class="work-image">
+                        <i class="fas fa-droplet"></i>
+                    </div>
+                    <div class="work-content">
+                        <h3>Blood Donation Management System</h3>
+                        <p>Comprehensive platform for managing blood donation records, donor information, and connecting donors with recipients.</p>
+                        <div class="work-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Firebase</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="work-card">
+                    <div class="work-image">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <div class="work-content">
+                        <h3>Online Flight Booking Management System</h3>
+                        <p>Full-featured flight booking platform with search, reservation, and payment integration capabilities.</p>
+                        <div class="work-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">PHP</span>
+                            <span class="tag">MySql</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7 -->
+                <div class="work-card">
+                    <div class="work-image">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="work-content">
+                        <h3>Personal Portfolio Website</h3>
+                        <p>A clean and professional personal portfolio showcasing skills and experiences with a responsive design.</p>
+                        <div class="work-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Achievements Section -->
+            <div class="achievements-section">
+                <h2>Achievements</h2>
+                <div class="achievements-grid">
+                    <div class="achievement-card">
+                        <i class="fas fa-trophy"></i>
+                        <h3>ICPC 2024</h3>
+                        <p>Participated in International Collegiate Programming Contest</p>
+                    </div>
+                    <div class="achievement-card">
+                        <i class="fas fa-medal"></i>
+                        <h3>IUBAT CS Fest 2024</h3>
+                        <p>Competitive Programming Contest Participant</p>
+                    </div>
+                    <div class="achievement-card">
+                        <i class="fas fa-star"></i>
+                        <h3>Codeforces Regular</h3>
+                        <p>Active participant in global programming contests</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+
+        // Check saved theme on page load
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-mode');
+            themeToggle.checked = true;
+        }
+
+        themeToggle.addEventListener('change', function() {
+            if (this.checked) {
+                document.body.classList.add('dark-mode');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.body.classList.remove('dark-mode');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    </script>
+
+</body>
+</html>

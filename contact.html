@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Rakib</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="logo">Rakib</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skill.html">Skills</a>
+            <a href="work.html">Works</a>
+            <a href="contact.html" class="active">Contact</a>
+            <a href="achievement.html">Achievement</a>
+        </nav>
+        <label class="switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider"></span>
+        </label>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h1>Get In Touch</h1>
+                <p>Feel free to reach out to me for any inquiries, collaborations, or just to say hello!</p>
+                
+                <div class="info-items">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>thomasedison24299@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+8801518739350</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Sector-10,Uttara</p>
+                            <p>Dhaka, Bangladesh</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://github.com/Rakib24299" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/your-profile" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.facebook.com/JULKER.NAIN.RAKIB" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <form>
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input type="text" placeholder="Enter your name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Your Email</label>
+                        <input type="email" placeholder="Enter your email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Subject</label>
+                        <input type="text" placeholder="Enter subject" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea rows="6" placeholder="Enter your message" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+
+        // Check saved theme on page load
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-mode');
+            themeToggle.checked = true;
+        }
+
+        themeToggle.addEventListener('change', function() {
+            if (this.checked) {
+                document.body.classList.add('dark-mode');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.body.classList.remove('dark-mode');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    </script>
+
+</body>
+</html>

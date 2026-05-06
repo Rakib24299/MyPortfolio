@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rakib Portfolio</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">Rakib</div>
+  <nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="skill.html">Skills</a>
+    <a href="work.html">Works</a>
+    <a href="contact.html">Contact</a>
+    <a href="achievement.html">Achievement</a>
+  </nav>
+  <label class="switch">
+    <input type="checkbox" id="theme-toggle">
+    <span class="slider"></span>
+  </label>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>
+      Hi,<br>
+      I'am <span>Rakib</span><br>
+      Web Developer
+    </h1>
+
+    <button class="btn" onclick="window.location.href='contact.html'">Contact</button>
+
+    <div class="socials">
+      <a href="https://www.linkedin.com/in/your-profile" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://www.facebook.com/JULKER.NAIN.RAKIB" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://github.com/Rakib24299" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+  </div>
+
+  <div class="hero-image">
+    <div class="blob">
+      <img src="me.jpg" alt="Rakib">
+    </div>
+  </div>
+</section>
+
+<script>
+const themeToggle = document.getElementById('theme-toggle');
+
+// Check saved theme on page load
+if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-mode');
+    themeToggle.checked = true;
+}
+
+themeToggle.addEventListener('change', function() {
+    if (this.checked) {
+        document.body.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark');
+    } else {
+        document.body.classList.remove('dark-mode');
+        localStorage.setItem('theme', 'light');
+    }
+});
+</script>
+
+</body>
+</html>
