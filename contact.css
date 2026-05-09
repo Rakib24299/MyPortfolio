@@ -385,3 +385,33 @@ body.dark-mode .form-group textarea:focus {
     background: rgba(255, 255, 255, 0.08);
     border-color: #4169ff;
 }
+
+/* ── FOOTER ── */
+.footer {
+    text-align: center;
+    padding: 40px 6%;
+    margin-top: 60px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    color: #4a5568;
+    font-size: 0.9rem;
+}
+
+.footer span {
+    background: linear-gradient(135deg, #a78bfa, #22d3ee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 600;
+}
+
+body.dark-mode .footer {
+    color: #94a3b8;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .footer span {
+    background: linear-gradient(135deg, #a78bfa, #22d3ee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
