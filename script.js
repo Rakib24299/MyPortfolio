@@ -3,24 +3,24 @@
 function applyTheme(isDark) {
     if (isDark) {
         document.documentElement.classList.add('dark');
-        document.body.classList.add('dark');
+        if (document.body) document.body.classList.add('dark');
         localStorage.setItem('theme', 'dark');
     } else {
         document.documentElement.classList.remove('dark');
-        document.body.classList.remove('dark');
+        if (document.body) document.body.classList.remove('dark');
         localStorage.setItem('theme', 'light');
     }
+}
 
-    // Sync all toggle switches on the page
-    document.querySelectorAll('.theme-toggle-input').forEach(input => {
-        input.checked = isDark;
-    });
+function toggleTheme() {
+    const isDark = document.documentElement.classList.contains('dark');
+    applyTheme(!isDark);
 }
 
 // Immediate theme setup - Default to Day / Light Mode
 (function initTheme() {
     const savedTheme = localStorage.getItem('theme');
-    const isDark = savedTheme === 'dark'; // Defaults to false (Day Mode)
+    const isDark = savedTheme === 'dark';
     if (isDark) {
         document.documentElement.classList.add('dark');
         if (document.body) document.body.classList.add('dark');
@@ -32,11 +32,17 @@ function applyTheme(isDark) {
 
 document.addEventListener('DOMContentLoaded', () => {
     const savedTheme = localStorage.getItem('theme');
-    const isDark = savedTheme === 'dark'; // Defaults to false (Day Mode)
-    
+    const isDark = savedTheme === 'dark';
     applyTheme(isDark);
 
-    // Attach listeners to all theme toggle inputs
+    // Attach click listeners to all theme toggle buttons
+    document.querySelectorAll('.theme-toggle-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            toggleTheme();
+        });
+    });
+
+    // Support legacy checkboxes if any
     document.querySelectorAll('.theme-toggle-input').forEach(input => {
         input.addEventListener('change', (e) => {
             applyTheme(e.target.checked);
