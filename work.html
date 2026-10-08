@@ -98,7 +98,7 @@
                 </label>
 
                 <!-- Mobile Menu Button with SVG Icons -->
-                <button id="mobile-menu-btn" type="button" class="md:hidden p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none transition">
+                <button id="mobile-menu-btn" type="button" class="md:hidden p-2 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none transition">
                     <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
@@ -150,108 +150,155 @@
         <!-- Header Section -->
         <section class="text-center space-y-3">
             <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-                My Works
+                Featured Projects
             </h1>
             <p class="text-slate-600 dark:text-slate-400 text-base sm:text-lg">
-                Projects and achievements I'm proud of
+                Full-stack applications, real-time systems, and software engineering projects
             </p>
             <div class="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto rounded-full mt-4"></div>
         </section>
 
-        <!-- Works Grid (1 col mobile, 2 col tablet/desktop) -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Works Grid (Seamless 0-Gap Unified Container) -->
+        <div class="glass-card rounded-xl shadow-lg border border-slate-200/80 dark:border-white/10 overflow-hidden grid grid-cols-1 md:grid-cols-2">
             
-            <!-- Project 1: Web-Based Messaging System -->
-            <div class="glass-card p-6 sm:p-8 rounded-3xl shadow-sm hover:shadow-xl transition duration-300 flex flex-col justify-between space-y-6 group">
+            <!-- Project 1: Event Management System (FEATURED FULL-STACK PROJECT) -->
+            <div class="p-6 sm:p-8 flex flex-col justify-between space-y-6 group hover:bg-slate-50/70 dark:hover:bg-white/[0.03] transition duration-200 border-b md:border-r border-slate-200 dark:border-white/10">
                 <div class="space-y-4">
-                    <div class="w-14 h-14 rounded-2xl bg-indigo-100 dark:bg-indigo-950/70 text-indigo-600 dark:text-indigo-400 flex items-center justify-center shadow-inner group-hover:scale-110 transition duration-300">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
-                        </svg>
+                    <div class="flex items-center justify-between">
+                        <div class="w-13 h-13 p-3 rounded-xl bg-indigo-100 dark:bg-indigo-950/70 text-indigo-600 dark:text-indigo-400 flex items-center justify-center shadow-inner group-hover:scale-105 transition duration-200">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <span class="text-xs font-bold px-3 py-1 rounded-full bg-indigo-600 text-white shadow-sm">
+                            Featured · 2026
+                        </span>
                     </div>
-                    <h3 class="text-2xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition">
+                    <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition">
+                        Event Management System
+                    </h3>
+                    <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
+                        Full-stack platform enabling event browsing, ticket booking, online payments, and OTP-based attendance verification with secure MongoDB database management.
+                    </p>
+                </div>
+
+                <div class="pt-4 border-t border-slate-200 dark:border-white/10 flex flex-wrap gap-2">
+                    <span class="px-3 py-1 text-xs font-semibold rounded-xl bg-indigo-100 dark:bg-indigo-950/80 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800/60">Node.js</span>
+                    <span class="px-3 py-1 text-xs font-semibold rounded-xl bg-indigo-100 dark:bg-indigo-950/80 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800/60">Express.js</span>
+                    <span class="px-3 py-1 text-xs font-semibold rounded-xl bg-indigo-100 dark:bg-indigo-950/80 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800/60">MongoDB</span>
+                    <span class="px-3 py-1 text-xs font-semibold rounded-xl bg-indigo-100 dark:bg-indigo-950/80 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800/60">Tailwind CSS</span>
+                </div>
+            </div>
+
+            <!-- Project 2: Online Flight Booking Management System -->
+            <div class="p-6 sm:p-8 flex flex-col justify-between space-y-6 group hover:bg-slate-50/70 dark:hover:bg-white/[0.03] transition duration-200 border-b border-slate-200 dark:border-white/10">
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between">
+                        <div class="w-13 h-13 p-3 rounded-xl bg-cyan-100 dark:bg-cyan-950/70 text-cyan-600 dark:text-cyan-400 flex items-center justify-center shadow-inner group-hover:scale-105 transition duration-200">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                            </svg>
+                        </div>
+                        <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                            2025
+                        </span>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition">
+                        Flight Booking Management System
+                    </h3>
+                    <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
+                        Web-based flight reservation system with search filters, seat selection, booking confirmations, and real-time flight ticket availability.
+                    </p>
+                </div>
+
+                <div class="pt-4 border-t border-slate-200 dark:border-white/10 flex flex-wrap gap-2">
+                    <span class="px-3 py-1 text-xs font-semibold rounded-xl bg-cyan-100 dark:bg-cyan-950/80 text-cyan-700 dark:text-cyan-300 border border-cyan-200 dark:border-cyan-800/60">PHP</span>
+                    <span class="px-3 py-1 text-xs font-semibold rounded-xl bg-cyan-100 dark:bg-cyan-950/80 text-cyan-700 dark:text-cyan-300 border border-cyan-200 dark:border-cyan-800/60">MySQL</span>
+                    <span class="px-3 py-1 text-xs font-semibold rounded-xl bg-cyan-100 dark:bg-cyan-950/80 text-cyan-700 dark:text-cyan-300 border border-cyan-200 dark:border-cyan-800/60">HTML/CSS</span>
+                </div>
+            </div>
+
+            <!-- Project 3: Blood Donation Management System -->
+            <div class="p-6 sm:p-8 flex flex-col justify-between space-y-6 group hover:bg-slate-50/70 dark:hover:bg-white/[0.03] transition duration-200 border-b md:border-r border-slate-200 dark:border-white/10">
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between">
+                        <div class="w-13 h-13 p-3 rounded-xl bg-rose-100 dark:bg-rose-950/70 text-rose-600 dark:text-rose-400 flex items-center justify-center shadow-inner group-hover:scale-105 transition duration-200">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                            </svg>
+                        </div>
+                        <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                            2025
+                        </span>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition">
+                        Blood Donation Management Platform
+                    </h3>
+                    <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
+                        Online portal connecting blood donors with urgent recipients, featuring donor registration, blood group queries, and emergency request management via Firebase.
+                    </p>
+                </div>
+
+                <div class="pt-4 border-t border-slate-200 dark:border-white/10 flex flex-wrap gap-2">
+                    <span class="px-3 py-1 text-xs font-semibold rounded-xl bg-rose-100 dark:bg-rose-950/80 text-rose-700 dark:text-rose-300 border border-rose-200 dark:border-rose-800/60">JavaScript</span>
+                    <span class="px-3 py-1 text-xs font-semibold rounded-xl bg-rose-100 dark:bg-rose-950/80 text-rose-700 dark:text-rose-300 border border-rose-200 dark:border-rose-800/60">Firebase</span>
+                    <span class="px-3 py-1 text-xs font-semibold rounded-xl bg-rose-100 dark:bg-rose-950/80 text-rose-700 dark:text-rose-300 border border-rose-200 dark:border-rose-800/60">HTML/CSS</span>
+                </div>
+            </div>
+
+            <!-- Project 4: Web-Based Messaging System -->
+            <div class="p-6 sm:p-8 flex flex-col justify-between space-y-6 group hover:bg-slate-50/70 dark:hover:bg-white/[0.03] transition duration-200 border-b md:border-b-0 border-slate-200 dark:border-white/10">
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between">
+                        <div class="w-13 h-13 p-3 rounded-xl bg-indigo-100 dark:bg-indigo-950/70 text-indigo-600 dark:text-indigo-400 flex items-center justify-center shadow-inner group-hover:scale-105 transition duration-200">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                            </svg>
+                        </div>
+                        <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                            2024
+                        </span>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition">
                         Web-Based Messaging System
                     </h3>
                     <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
-                        Real-time messaging application enabling users to communicate effectively with message storage and retrieval capabilities.
+                        Interactive messaging application with user authentication, conversation management, and secure message storage & retrieval with SQL.
                     </p>
                 </div>
 
                 <div class="pt-4 border-t border-slate-200 dark:border-white/10 flex flex-wrap gap-2">
-                    <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-indigo-100 dark:bg-indigo-950/80 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800/60">HTML</span>
-                    <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-indigo-100 dark:bg-indigo-950/80 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800/60">CSS</span>
-                    <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-indigo-100 dark:bg-indigo-950/80 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800/60">MySQL</span>
+                    <span class="px-3 py-1 text-xs font-semibold rounded-xl bg-indigo-100 dark:bg-indigo-950/80 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800/60">HTML</span>
+                    <span class="px-3 py-1 text-xs font-semibold rounded-xl bg-indigo-100 dark:bg-indigo-950/80 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800/60">CSS</span>
+                    <span class="px-3 py-1 text-xs font-semibold rounded-xl bg-indigo-100 dark:bg-indigo-950/80 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800/60">MySQL</span>
                 </div>
             </div>
 
-            <!-- Project 2: Blood Donation Management System -->
-            <div class="glass-card p-6 sm:p-8 rounded-3xl shadow-sm hover:shadow-xl transition duration-300 flex flex-col justify-between space-y-6 group">
+            <!-- Project 5: Personal Portfolio Website -->
+            <div class="p-6 sm:p-8 flex flex-col justify-between space-y-6 group hover:bg-slate-50/70 dark:hover:bg-white/[0.03] transition duration-200 md:col-span-2 border-t border-slate-200 dark:border-white/10">
                 <div class="space-y-4">
-                    <div class="w-14 h-14 rounded-2xl bg-rose-100 dark:bg-rose-950/70 text-rose-600 dark:text-rose-400 flex items-center justify-center shadow-inner group-hover:scale-110 transition duration-300">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
-                        </svg>
+                    <div class="flex items-center justify-between">
+                        <div class="w-13 h-13 p-3 rounded-xl bg-emerald-100 dark:bg-emerald-950/70 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shadow-inner group-hover:scale-105 transition duration-200">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                            2026
+                        </span>
                     </div>
-                    <h3 class="text-2xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition">
-                        Blood Donation Management System
+                    <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition">
+                        Personal Developer Portfolio
                     </h3>
                     <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
-                        Comprehensive platform for managing blood donation records, donor information, and connecting donors with recipients seamlessly.
+                        A modern and professional developer portfolio showcasing full-stack projects, research papers, certifications, and capabilities with a responsive design and dark/light mode.
                     </p>
                 </div>
 
                 <div class="pt-4 border-t border-slate-200 dark:border-white/10 flex flex-wrap gap-2">
-                    <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-rose-100 dark:bg-rose-950/80 text-rose-700 dark:text-rose-300 border border-rose-200 dark:border-rose-800/60">HTML</span>
-                    <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-rose-100 dark:bg-rose-950/80 text-rose-700 dark:text-rose-300 border border-rose-200 dark:border-rose-800/60">CSS</span>
-                    <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-rose-100 dark:bg-rose-950/80 text-rose-700 dark:text-rose-300 border border-rose-200 dark:border-rose-800/60">JavaScript</span>
-                    <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-rose-100 dark:bg-rose-950/80 text-rose-700 dark:text-rose-300 border border-rose-200 dark:border-rose-800/60">Firebase</span>
-                </div>
-            </div>
-
-            <!-- Project 3: Online Flight Booking Management System -->
-            <div class="glass-card p-6 sm:p-8 rounded-3xl shadow-sm hover:shadow-xl transition duration-300 flex flex-col justify-between space-y-6 group">
-                <div class="space-y-4">
-                    <div class="w-14 h-14 rounded-2xl bg-cyan-100 dark:bg-cyan-950/70 text-cyan-600 dark:text-cyan-400 flex items-center justify-center shadow-inner group-hover:scale-110 transition duration-300">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition">
-                        Online Flight Booking Management System
-                    </h3>
-                    <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
-                        Full-featured flight booking platform with flight search, seat reservations, and payment integration capabilities.
-                    </p>
-                </div>
-
-                <div class="pt-4 border-t border-slate-200 dark:border-white/10 flex flex-wrap gap-2">
-                    <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-cyan-100 dark:bg-cyan-950/80 text-cyan-700 dark:text-cyan-300 border border-cyan-200 dark:border-cyan-800/60">HTML</span>
-                    <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-cyan-100 dark:bg-cyan-950/80 text-cyan-700 dark:text-cyan-300 border border-cyan-200 dark:border-cyan-800/60">CSS</span>
-                    <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-cyan-100 dark:bg-cyan-950/80 text-cyan-700 dark:text-cyan-300 border border-cyan-200 dark:border-cyan-800/60">PHP</span>
-                    <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-cyan-100 dark:bg-cyan-950/80 text-cyan-700 dark:text-cyan-300 border border-cyan-200 dark:border-cyan-800/60">MySQL</span>
-                </div>
-            </div>
-
-            <!-- Project 4: Personal Portfolio Website -->
-            <div class="glass-card p-6 sm:p-8 rounded-3xl shadow-sm hover:shadow-xl transition duration-300 flex flex-col justify-between space-y-6 group">
-                <div class="space-y-4">
-                    <div class="w-14 h-14 rounded-2xl bg-emerald-100 dark:bg-emerald-950/70 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shadow-inner group-hover:scale-110 transition duration-300">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition">
-                        Personal Portfolio Website
-                    </h3>
-                    <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
-                        A clean, modern, and professional personal portfolio showcasing skills, projects, and experiences with full responsive design.
-                    </p>
-                </div>
-
-                <div class="pt-4 border-t border-slate-200 dark:border-white/10 flex flex-wrap gap-2">
-                    <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-emerald-100 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/60">HTML5</span>
-                    <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-emerald-100 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/60">Tailwind CSS</span>
-                    <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-emerald-100 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/60">JavaScript</span>
+                    <span class="px-3 py-1 text-xs font-semibold rounded-xl bg-emerald-100 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/60">HTML5</span>
+                    <span class="px-3 py-1 text-xs font-semibold rounded-xl bg-emerald-100 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/60">Tailwind CSS</span>
+                    <span class="px-3 py-1 text-xs font-semibold rounded-xl bg-emerald-100 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/60">JavaScript</span>
                 </div>
             </div>
 
