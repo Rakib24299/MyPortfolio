@@ -17,11 +17,10 @@ function applyTheme(isDark) {
     });
 }
 
-// Immediate theme setup
+// Immediate theme setup - Default to Day / Light Mode
 (function initTheme() {
     const savedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const isDark = savedTheme === 'dark' || (!savedTheme && prefersDark);
+    const isDark = savedTheme === 'dark'; // Defaults to false (Day Mode)
     if (isDark) {
         document.documentElement.classList.add('dark');
         if (document.body) document.body.classList.add('dark');
@@ -33,8 +32,7 @@ function applyTheme(isDark) {
 
 document.addEventListener('DOMContentLoaded', () => {
     const savedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const isDark = savedTheme === 'dark' || (!savedTheme && prefersDark);
+    const isDark = savedTheme === 'dark'; // Defaults to false (Day Mode)
     
     applyTheme(isDark);
 
