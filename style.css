@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400;500;600;700&family=Edu+QLD+Beginner:wght@400;500;600;700&family=Fontdiner+Swanky&family=Poppins:wght@300;400;500;600;700;800;900&family=Story+Script&display=swap');
 
 :root {
     --primary-color: #41200f;
@@ -9,6 +9,18 @@
 * {
     font-family: 'Poppins', sans-serif;
     transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.font-edu {
+    font-family: 'Edu QLD Beginner', 'Edu AU VIC WA NT Hand', cursive, sans-serif !important;
+}
+
+.font-swanky {
+    font-family: 'Fontdiner Swanky', cursive, sans-serif !important;
+}
+
+.font-story {
+    font-family: 'Story Script', cursive, sans-serif !important;
 }
 
 /* Base Body Backgrounds */

@@ -88,4 +88,53 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // Floating Project Cursor Follower (for work page project cards)
+    const projectCursor = document.getElementById('project-cursor');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    if (projectCursor && projectCards.length > 0) {
+        let mouseX = -100, mouseY = -100;
+        let isHovering = false;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            if (isHovering) {
+                projectCursor.style.left = '0px';
+                projectCursor.style.top = '0px';
+                projectCursor.style.transform = `translate3d(${mouseX + 14}px, ${mouseY + 14}px, 0)`;
+            }
+        });
+
+        projectCards.forEach(card => {
+            card.classList.add('cursor-pointer');
+
+            card.addEventListener('mouseenter', (e) => {
+                isHovering = true;
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+                projectCursor.style.left = '0px';
+                projectCursor.style.top = '0px';
+                projectCursor.style.transform = `translate3d(${mouseX + 14}px, ${mouseY + 14}px, 0)`;
+                projectCursor.classList.remove('opacity-0', 'scale-75');
+                projectCursor.classList.add('opacity-100', 'scale-100');
+            });
+
+            card.addEventListener('mouseleave', () => {
+                isHovering = false;
+                projectCursor.classList.remove('opacity-100', 'scale-100');
+                projectCursor.classList.add('opacity-0', 'scale-75');
+            });
+
+            // Click anywhere on card opens project repository
+            card.addEventListener('click', (e) => {
+                if (e.target.closest('a')) return;
+                const targetLink = card.querySelector('h3 a')?.getAttribute('href');
+                if (targetLink) {
+                    window.open(targetLink, '_blank', 'noopener,noreferrer');
+                }
+            });
+        });
+    }
 });
